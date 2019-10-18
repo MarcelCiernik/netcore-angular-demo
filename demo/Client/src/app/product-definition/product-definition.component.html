@@ -1,0 +1,42 @@
+<br>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default" >Name</span>
+  </div>
+  <input [(ngModel)]="Name" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" style="max-width:400px">
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+  </div>
+  <input [(ngModel)]="Description"  type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" style="max-width:400px">
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Price</span>
+  </div>
+  <input [(ngModel)]="Price" type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" style="max-width:400px">
+</div>
+
+
+<div class="dropdown">
+  <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{selectedName}}
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" (click)="SetCategory('dog')">dog</a>
+    <a class="dropdown-item" (click)="SetCategory('cats')">cats</a>
+    <a class="dropdown-item" (click)="SetCategory('other')">other</a>
+  </div>
+</div>
+
+
+<br>
+<div>
+    <a routerLink="/home"><button type="button" class="btn btn-primary" style="margin: 10px">Back</button></a>
+    <button type="button" class="btn btn-primary" (click)="CreateProduct()" style="margin: 10px">Create</button>
+</div>
